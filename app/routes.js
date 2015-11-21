@@ -14,6 +14,13 @@ function getTodos(res){
 module.exports = function(app) {
 
 	// api ---------------------------------------------------------------------
+	// get date
+	app.get('/api/date', function(req, res) {
+		var currentDate = Date.now();
+		res.json(currentDate);
+	
+	});
+
 	// get all todos
 	app.get('/api/todos', function(req, res) {
 
